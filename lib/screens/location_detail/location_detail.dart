@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'image_banner.dart';
 import 'text_section.dart';
 
 class LocationDetail extends StatelessWidget {
@@ -13,6 +14,7 @@ class LocationDetail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment
             .stretch, // each item stretch from left to right on the crossAxis
         children: [
+          ImageBanner("assets/images/Arashiyama.jpg"),
           TextSection(Colors.red),
           TextSection(Colors.blue),
           TextSection(Colors.green),
