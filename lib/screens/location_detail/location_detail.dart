@@ -15,9 +15,9 @@ class LocationDetail extends StatelessWidget {
             .stretch, // each item stretch from left to right on the crossAxis
         children: [
           ImageBanner("assets/images/Arashiyama.jpg"),
-          TextSection(Colors.red),
-          TextSection(Colors.blue),
-          TextSection(Colors.green),
+          TextSection('Yo', 'DUN'),
+          TextSection('Yo', 'MUN'),
+          TextSection('Yo', 'JUN'),
         ],
       ),
     );
