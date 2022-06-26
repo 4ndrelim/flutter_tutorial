@@ -9,6 +9,16 @@ class Location {
 
   Location(this.id, this.name, this.imagePath, this.facts);
 
+  static Location? fetchByID(int locationID) {
+    List<Location> locations = Location.fetchAll();
+    for (var i = 0; i < locations.length; i++) {
+      if (locations[i].id == locationID) {
+        return locations[i];
+      }
+    }
+    return null;
+  }
+
   static List<Location> fetchAll() {
     return [
       Location(1, 'Arashiyama Bamboo Grove', 'assets/images/Arashiyama.jpg', [

@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'screens/locations/locations.dart';
+import 'screens/location_detail/location_detail.dart';
 import 'style.dart';
+
+const LocationsRoute = '/';
+const LocationDetailRoute = '/location_detail';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Locations(),
+      onGenerateRoute: _routes(),
       // something general
       theme: ThemeData(
         // let us define how widgets are styled in the app
@@ -20,5 +24,23 @@ class App extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  RouteFactory _routes() {
+    return (settings) {
+      final Map arguments = (settings.arguments ?? {}) as Map;
+      Widget screen;
+      switch (settings.name) {
+        case LocationsRoute:
+          screen = Locations();
+          break;
+        case LocationDetailRoute:
+          screen = LocationDetail(arguments['id']);
+          break;
+        default:
+          return null;
+      }
+      return MaterialPageRoute(builder: (BuildContext context) => screen);
+    };
   }
 }

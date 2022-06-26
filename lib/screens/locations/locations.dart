@@ -21,5 +21,8 @@ class Locations extends StatelessWidget {
     );
   }
 
-  void _onLocationTap(BuildContext context, int locationID) {}
+  void _onLocationTap(BuildContext context, int locationID) {
+    Navigator.pushNamed(context, LocationDetailRoute,
+        arguments: {"id": locationID});
+  }
 }
