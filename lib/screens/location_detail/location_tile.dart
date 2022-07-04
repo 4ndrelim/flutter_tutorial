@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/location.dart';
 import '../../style.dart';
 
-const LocationTileHeight = 100.0;
+const LocationTileHeight = 85.0;
 
 class LocationTile extends StatelessWidget {
   final Location location;
@@ -15,11 +15,11 @@ class LocationTile extends StatelessWidget {
     final textColor = this.darkTheme ? TextColorLight : TextColorDark;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: DefaultPaddingHorizontal),
+      //padding: EdgeInsets.symmetric(horizontal: DefaultPaddingHorizontal),
       height: LocationTileHeight,
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               location.name.toUpperCase(),

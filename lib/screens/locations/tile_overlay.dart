@@ -14,7 +14,7 @@ class TileOverlay extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          padding: EdgeInsets.symmetric(vertical: 5.0),
+          padding: EdgeInsets.symmetric(vertical: 3.0),
           decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
           child: LocationTile(location: location, darkTheme: true),
         ),

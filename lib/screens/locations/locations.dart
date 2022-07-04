@@ -28,7 +28,7 @@ class Locations extends StatelessWidget {
   Widget _itemBuilder(BuildContext context, int index, Location location) {
     return GestureDetector(
       child: Container(
-        height: 245.0,
+        height: 275.0,
         child: Stack(
           children: [
             ImageBanner(location.imagePath),

@@ -9,7 +9,7 @@ class ImageBanner extends StatelessWidget {
     // wrapping in a container or some widget allows for properties like padding
     return Container(
       constraints: BoxConstraints.expand(
-        height: 200.0,
+        height: 250.0,
       ),
       decoration: BoxDecoration(color: Colors.grey),
       child: Image.asset(

@@ -13,20 +13,23 @@ class LocationDetail extends StatelessWidget {
     //final location = locations.first; // get element at first index
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello'),
+        title: Text(location!.name),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment
-            .stretch, // each item stretch from left to right on the crossAxis
-        children: [
-          ImageBanner(location!.imagePath), // ! adds null check
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),
-            child: LocationTile(location: location),
-          ),
-        ]..addAll(textSections(
-            location)), // cascade operator to append all objects in an iterable to the existing list
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment
+              .stretch, // each item stretch from left to right on the crossAxis
+          children: [
+            ImageBanner(location.imagePath), // ! adds null check
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),
+              child: LocationTile(location: location),
+            ),
+          ]..addAll(textSections(
+              location)), // cascade operator to append all objects in an iterable to the existing list
+        ),
       ),
     );
   }

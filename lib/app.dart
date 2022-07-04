@@ -10,15 +10,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: _routes(),
       // something general
       theme: ThemeData(
         // let us define how widgets are styled in the app
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           titleTextStyle: AppBarTextStyle,
+          backgroundColor: Color.fromARGB(255, 0, 98, 104),
         ),
         // loose name to be reused
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           // cannot mix 2018 and 2021 terms
           titleMedium: TitleTextStyle,
           titleSmall: SubTitleTextStyle,

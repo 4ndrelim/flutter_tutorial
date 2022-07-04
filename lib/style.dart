@@ -1,19 +1,16 @@
-import 'dart:html';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 const String FontNameDefault = "Montserrat";
 
-const LargeTextSize = 26.0;
-const MediumTextSize = 20.0;
-const BodyTextSize = 16.0;
+const LargeTextSize = 27.0;
+const MediumTextSize = 23.0;
+const BodyTextSize = 16.5;
 
-const DefaultPaddingHorizontal = 12.0;
+const DefaultPaddingHorizontal = 30.0;
 
 const Color TextColorDark = Colors.black;
-const Color TextColorLight = Colors.white;
-const Color TextColorAccent = Colors.red;
+const Color TextColorLight = Color.fromARGB(255, 255, 255, 255);
+const Color TextColorAccent = Color.fromARGB(255, 255, 136, 128);
 const Color TextColorFaint = Color.fromRGBO(125, 125, 125, 1.0);
 
 const AppBarTextStyle = TextStyle(
@@ -47,6 +44,6 @@ const CaptionTextStyle = TextStyle(
 const Body1TextStyle = TextStyle(
   fontFamily: FontNameDefault,
   fontWeight: FontWeight.w300,
-  fontSize: MediumTextSize,
+  fontSize: BodyTextSize,
   color: Colors.black,
 );
