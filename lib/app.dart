@@ -19,7 +19,10 @@ class App extends StatelessWidget {
         ),
         // loose name to be reused
         textTheme: TextTheme(
+          // cannot mix 2018 and 2021 terms
           titleMedium: TitleTextStyle,
+          titleSmall: SubTitleTextStyle,
+          headlineSmall: CaptionTextStyle,
           bodyMedium: Body1TextStyle,
         ),
       ),

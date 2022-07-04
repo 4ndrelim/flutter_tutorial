@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'image_banner.dart';
 import 'text_section.dart';
 import '../../models/location.dart';
+import 'location_tile.dart';
 
 class LocationDetail extends StatelessWidget {
   final int _locationID;
@@ -20,6 +21,10 @@ class LocationDetail extends StatelessWidget {
             .stretch, // each item stretch from left to right on the crossAxis
         children: [
           ImageBanner(location!.imagePath), // ! adds null check
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),
+            child: LocationTile(location: location),
+          ),
         ]..addAll(textSections(
             location)), // cascade operator to append all objects in an iterable to the existing list
       ),

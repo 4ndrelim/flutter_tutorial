@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../app.dart';
 import '../../models/location.dart';
+import '../location_detail/image_banner.dart';
+import 'tile_overlay.dart';
 
 class Locations extends StatelessWidget {
   @override
@@ -26,7 +28,13 @@ class Locations extends StatelessWidget {
   Widget _itemBuilder(BuildContext context, int index, Location location) {
     return GestureDetector(
       child: Container(
-        child: Text(location.name),
+        height: 245.0,
+        child: Stack(
+          children: [
+            ImageBanner(location.imagePath),
+            TileOverlay(location),
+          ],
+        ),
       ),
       onTap: () => _onLocationTap(context, location.id),
     );
