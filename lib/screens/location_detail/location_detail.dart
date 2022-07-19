@@ -6,7 +6,7 @@ import 'location_tile.dart';
 
 class LocationDetail extends StatelessWidget {
   final int _locationID;
-  LocationDetail(this._locationID);
+  const LocationDetail(this._locationID);
   @override
   Widget build(BuildContext context) {
     final location = Location.fetchByID(_locationID);
@@ -24,11 +24,12 @@ class LocationDetail extends StatelessWidget {
           children: [
             ImageBanner(location.imagePath), // ! adds null check
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 4.0),
               child: LocationTile(location: location),
             ),
-          ]..addAll(textSections(
-              location)), // cascade operator to append all objects in an iterable to the existing list
+            ...textSections(location),
+          ], // cascade operator to append all objects in an iterable to the existing list
         ),
       ),
     );
